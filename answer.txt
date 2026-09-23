@@ -1,0 +1,50 @@
+yes , we have missed or overwrite something because we were working on different devices.
+we compared both versions and discussed the changes together . we kept changes that improved the poem.
+With five people, managing separate files would become much more difficult. There would be more changes to compare, more chances of conflicts, and a greater possibility of accidentally losing someone's work.
+We would use a version control system such as Git. Each person would have their own account and commits would record who made each change.
+
+                 ┌──────────────────────┐
+                 │   Shared GitHub      │
+                 │     Repository       │
+                 └──────────┬───────────┘
+                            │
+             ┌──────────────┴──────────────┐
+             │                             │
+      ┌──────▼──────┐               ┌──────▼──────┐
+      │  Student 1  │               │  Student 2  │
+      │   Branch    │               │   Branch    │
+      └──────┬──────┘               └──────┬──────┘
+             │                             │
+          Changes                        Changes
+             │                             │
+             └──────────────┬──────────────┘
+                            ▼
+                  ┌──────────────────┐
+                  │  Git detects     │
+                  │    conflicts     │
+                  └────────┬─────────┘
+                           │
+                     Resolve Conflict
+                           │
+                           ▼
+                  ┌──────────────────┐
+                  │ Review & Merge   │
+                  └────────┬─────────┘
+                           ▼
+                  ┌──────────────────┐
+                  │   Main Branch    │
+                  │ Updated Version  │
+                  └──────────────────┘
+How the system meets the requirements
+Store different versions:
+Git stores every committed version of the project, so older versions can be viewed or restored.
+Track who made changes:
+Every Git commit records the user who made the change, along with the date and time.
+Handle conflicts:
+If two people edit the same line, Git identifies a conflict. The team compares the changes and resolves the conflict before merging.
+Name/identify versions:
+Each version has a unique commit ID. Important versions can also be given tags such as v1.0, v1.1, and v2.0.
+Describe what changed:
+Each commit should have a clear message, such as “Added contact form”, “Updated homepage”, or “Fixed navigation.”
+Prevent overwriting:
+Each person works on their own branch instead of directly changing the main branch. Changes are reviewed and merged into the main branch after conflicts are resolved.
